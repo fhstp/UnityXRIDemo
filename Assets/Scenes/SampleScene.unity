@@ -2741,6 +2741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dispenser
       objectReference: {fileID: 0}
+    - target: {fileID: 2249935924510933012, guid: 6f5f85a620686a842bbb451a6e517b58, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 815437995}
     - target: {fileID: 6104366610667890058, guid: 6f5f85a620686a842bbb451a6e517b58, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
