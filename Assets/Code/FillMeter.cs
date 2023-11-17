@@ -6,9 +6,10 @@ namespace At.Ac.FhStp.XRIDemo
 {
     public class FillMeter : MonoBehaviour
     {
+        [SerializeField] private float changeIncrement;
         [SerializeField] private UnityEvent<float> onFillChanged;
         [SerializeField] private UnityEvent onFull;
-        [SerializeField] private float changeIncrement;
+
 
         private float fill;
 
