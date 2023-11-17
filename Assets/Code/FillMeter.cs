@@ -16,12 +16,12 @@ namespace At.Ac.FhStp.XRIDemo
         public void IncreaseFill()
         {
             var newFill = Mathf.Clamp01(fill + changeIncrement);
-            if (Math.Abs(newFill - fill) < Mathf.Epsilon) return;
+            if (Mathf.Approximately(newFill, fill)) return;
 
             fill = newFill;
             onFillChanged.Invoke(newFill);
 
-            if (Math.Abs(fill - 1) < Mathf.Epsilon) onFull.Invoke();
+            if (Mathf.Approximately(fill, 1)) onFull.Invoke();
         }
 
         private void Start()
