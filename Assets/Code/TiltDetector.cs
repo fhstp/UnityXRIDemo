@@ -28,7 +28,8 @@ namespace At.Ac.FhStp.XRIDemo
 
         private void Awake()
         {
-            isTiltedChanged.Invoke(IsTilted);
+            wasTilted = IsTilted;
+            isTiltedChanged.Invoke(wasTilted);
         }
     }
 }
