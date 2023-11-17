@@ -303,9 +303,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5d228e9ff1ebe488897a5c3bef1761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropPrefab: {fileID: 5279774275525804634, guid: f2f5a3c1b1f07a144829c3e00369e6ae, type: 3}
+  prefab: {fileID: 5279774275525804634, guid: f2f5a3c1b1f07a144829c3e00369e6ae, type: 3}
   spawnLocationTransform: {fileID: 5424794796039183312}
-  dropsPerSecond: 4
+  spawnsPerSecond: 4
 --- !u!1 &6165263825910121753
 GameObject:
   m_ObjectHideFlags: 0
