@@ -1,7 +1,9 @@
 {
     "name": "At.Ac.FhStp.XRIDemo",
     "rootNamespace": "At.Ac.FhStp.XRIDemo",
-    "references": [],
+    "references": [
+        "GUID:fe685ec1767f73d42b749ea8045bfe43"
+    ],
     "includePlatforms": [
         "Android",
         "Editor"
