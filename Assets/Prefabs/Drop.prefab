@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7855044088034794763}
   - component: {fileID: 2419426861124901600}
   - component: {fileID: 6665781926793437465}
+  - component: {fileID: 4339549979822703070}
+  - component: {fileID: 460068137179105936}
   m_Layer: 7
   m_Name: Drop
   m_TagString: Untagged
@@ -133,3 +135,43 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4339549979822703070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5279774275525804634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c380426c60fa94fa91bdfc55978057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTouchingFloor:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 460068137179105936}
+        m_TargetAssemblyTypeName: At.Ac.FhStp.XRIDemo.Destroyer, At.Ac.FhStp.XRIDemo
+        m_MethodName: DestroyGameObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  maxDotDeviation: 0.2
+--- !u!114 &460068137179105936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5279774275525804634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566601b233f99bd4e8848eda28cc3da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
