@@ -9,11 +9,11 @@ namespace At.Ac.FhStp.XRIDemo
         [SerializeField] private float maxDotDeviation;
 
 
-        private void OnCollisionStay(Collision other)
+        private void OnCollisionStay(Collision collision)
         {
-            for (var i = 0; i < other.contactCount; i++)
+            for (var i = 0; i < collision.contactCount; i++)
             {
-                var normal = other.GetContact(i).normal;
+                var normal = collision.GetContact(i).normal;
                 var dotDeviation = 1 - Vector3.Dot(Vector3.up, normal);
                 var isCollidingWithFloor = dotDeviation <= maxDotDeviation;
                 if (!isCollidingWithFloor) continue;
