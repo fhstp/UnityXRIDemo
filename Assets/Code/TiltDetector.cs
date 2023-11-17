@@ -13,9 +13,9 @@ namespace At.Ac.FhStp.XRIDemo
 
         private Vector3 Up => transform.up;
 
-        private float DotDerivation => Vector3.Dot(targetUp, Up);
+        private float DotDeviation => 1 - Vector3.Dot(targetUp, Up);
 
-        private bool IsTilted => 1 - DotDerivation <= maxDotDeviation;
+        private bool IsTilted => DotDeviation <= maxDotDeviation;
 
 
         private void Update()

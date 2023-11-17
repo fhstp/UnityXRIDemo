@@ -14,8 +14,8 @@ namespace At.Ac.FhStp.XRIDemo
             for (var i = 0; i < other.contactCount; i++)
             {
                 var normal = other.GetContact(i).normal;
-                var dotDeviation = Vector3.Dot(Vector3.up, normal);
-                var isCollidingWithFloor = 1 - dotDeviation <= maxDotDeviation;
+                var dotDeviation = 1 - Vector3.Dot(Vector3.up, normal);
+                var isCollidingWithFloor = dotDeviation <= maxDotDeviation;
                 if (!isCollidingWithFloor) continue;
 
                 onTouchingFloor.Invoke();
