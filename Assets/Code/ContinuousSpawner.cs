@@ -10,6 +10,10 @@ namespace At.Ac.FhStp.XRIDemo
         [SerializeField] private float spawnsPerSecond;
 
 
+        private bool ShouldSpawn =>
+            !destroyCancellationToken.IsCancellationRequested && enabled;
+
+
         private void Spawn()
         {
             _ = Instantiate(prefab, spawnLocationTransform.position, Quaternion.identity);
@@ -19,7 +23,7 @@ namespace At.Ac.FhStp.XRIDemo
         {
             async void SpawnContinuously()
             {
-                while (!destroyCancellationToken.IsCancellationRequested && enabled)
+                while (ShouldSpawn)
                 {
                     Spawn();
                     await Task.Delay(Mathf.FloorToInt(1f / spawnsPerSecond * 1000));
