@@ -24,7 +24,7 @@ namespace At.Ac.FhStp.XRIDemo
             if (Math.Abs(fill - 1) < Mathf.Epsilon) onFull.Invoke();
         }
 
-        private void Awake()
+        private void Start()
         {
             onFillChanged.Invoke(0);
         }
