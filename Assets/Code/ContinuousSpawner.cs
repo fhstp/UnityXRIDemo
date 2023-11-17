@@ -26,7 +26,8 @@ namespace At.Ac.FhStp.XRIDemo
                 while (ShouldSpawn)
                 {
                     Spawn();
-                    await Task.Delay(Mathf.FloorToInt(1f / spawnsPerSecond * 1000));
+                    var waitTimeMillis = Mathf.FloorToInt(1f / spawnsPerSecond * 1000);
+                    await Task.Delay(waitTimeMillis);
                 }
             }
 
